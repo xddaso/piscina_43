@@ -6,7 +6,7 @@
 /*   By: fdelucch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 13:57:12 by fdelucch          #+#    #+#             */
-/*   Updated: 2026/06/09 14:15:18 by fdelucch         ###   ########.fr       */
+/*   Updated: 2026/06/10 12:44:29 by fdelucch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	main(void)
 {
 	int	size;
 	int	*tab;
-	int	numbers[] = {1, 2, 3, 4, 5};
+	int	numbers[] = {1, 2, 3, 4, 5, 6};
 
-	size = 5;
+	size = 6;
 	tab = numbers;
 	ft_rev_int_tab(tab, size);
 	printf("%d", numbers[0]);
@@ -29,4 +29,5 @@ int	main(void)
 	printf("%d", numbers[2]);
 	printf("%d", numbers[3]);
 	printf("%d", numbers[4]);
+	printf("%d", numbers[5]);
 }
