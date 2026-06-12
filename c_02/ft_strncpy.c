@@ -3,33 +3,30 @@
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
-	int	end;
+	unsigned int	i;
 
 	i = 0;
 	while (i < n)
 	{
-		if (src[i] == '\0')
-			end = 1;
-		if (end != 1)
+		while ((src[i] != '\0') && (i < (n-1)))
 		{
 			dest[i] = src[i];
-			i++;
+                        i++;
 		}
-		else
-		{
-			dest[i] = '\0';
-			i++;
-		}
+		dest[i] = '\0';
+		i++;
 	}
+	return (dest);
 }
 
 int	main(void)
 {
 	char	src[20] = "holaasdqwe";
-	char	dest[10] = "difgdkeasq";
-	int	n = 10;
-	
-	ft_strncpy(dest, src, n);
-	printf("src: %s\ndest: %s", src, dest);
+	char	dest[10];
+	unsigned int	n = 10;
+	char	*res;
+
+	res = ft_strncpy(dest, src, n);
+	printf(res);
+	//printf("src: %s\ndest: %s", src, dest);
 }
