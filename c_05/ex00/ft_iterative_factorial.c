@@ -5,20 +5,12 @@ int	ft_iterative_factorial(int nb)
 {
 	int	res;
 
-	if (nb == 0 || nb == 1)
-		return (1);
-	else if (nb > 1)
-	{
-		res = 1;
-		while (nb
-		{
-			res = res * nb;
-			nb--;
-		}
-		return (res);
-	}
-	else
-		return (0); 
+	if (nb < 0)
+		return (0);
+	res = 1;
+	while (nb > 1)
+		res = res * nb--;
+	return (res);
 }
 /*
 int	main(void)
