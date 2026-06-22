@@ -9,9 +9,7 @@ int	ft_recursive_factorial(int nb)
 		return (0);
 	if (nb > 1)
 	{
-		res = nb * (nb - 1);
-		nb--;
-		ft_recursive_factorial(nb);
+		res = (nb * ft_recursive_factorial(nb - 1));
 	}
 	return (res);
 }
